@@ -26,7 +26,7 @@ a {
     height: 114px;
     float: left;
     margin-left: 11px;
-    margin-top: -14px;
+    margin-top: -22px;
     border: 4px solid #b40138;
     border-radius: 50%;
     background: #fff url(../image/logo.png) no-repeat center;
@@ -63,74 +63,173 @@ a {
     height: 200px;
     position: absolute;
     left: 0;
-    top:80px;
-    transform-style:preserve-3d;
+    top: 80px;
+    transform-style: preserve-3d;
     display: none;
     perspective: 1000px;
 }
-.header-sec-list{
-    width:100%;
-    height:40px;
-    background:url(../image/bg.png);
+
+.header-sec-list {
+    width: 100%;
+    height: 40px;
+    background: url(../image/bg.png);
     opacity: 0;
-    transform:rotateX(45deg);
-    transform-origin:0 top;
+    transform: rotateX(45deg);
+    transform-origin: 0 top;
 }
 
-.header-sec-list:nth-child(1){
-    background-position:  0 0;
-}
-.header-sec-list:nth-child(2){
-    background-position:  0 -40px;
-}
-.header-sec-list:nth-child(3){
-    background-position:  0 -80px;
-}
-.header-sec-list:nth-child(4){
-    background-position:  0 -120px;
-}
-.header-sec-list:nth-child(5){
-    background-position:  0 -160px;
+.header-sec-list:nth-child(1) {
+    background-position: 0 0;
 }
 
-.header-sec-inner{
-    width:170px;
-    height:39px;
-    margin:0 auto;
-    border-bottom:1px dashed #fe7c94;
+.header-sec-list:nth-child(2) {
+    background-position: 0 -40px;
+}
+
+.header-sec-list:nth-child(3) {
+    background-position: 0 -80px;
+}
+
+.header-sec-list:nth-child(4) {
+    background-position: 0 -120px;
+}
+
+.header-sec-list:nth-child(5) {
+    background-position: 0 -160px;
+}
+
+.header-sec-inner {
+    width: 170px;
+    height: 39px;
+    margin: 0 auto;
+    border-bottom: 1px dashed #fe7c94;
     line-height: 39px;
 }
-.header-sec-inner a{
+
+.header-sec-inner a {
     font-size: 12px;
 }
 
 @keyframes showlist {
-    0%{
+    0% {
         opacity: 0;
         transform: rotateX(90deg);
     }
-    100%{
+    100% {
         opacity: 1;
         transform: rotateX(0);
     }
 }
+
 @keyframes hidelist {
-    0%{
+    0% {
         opacity: 1;
         transform: rotateX(0);
     }
-    100%{
+    100% {
         opacity: 0;
         transform: rotateX(90deg);
     }
 }
 
+.banner {
+    width: 100%;
+    height: 610px;
+    margin-top: 14px;
+    background: #000;
+    position: relative;
+}
 
+.banner-inner {
+    width: 1000px;
+    height: 610px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
 
+.banner-box {
+    width: 416px;
+    height: 305px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    list-style: none;
+    transform-style: preserve-3d;
+    transform-origin:center center -360px;
+}
 
+.banner-box li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: center center -360px;
+}
 
+.banner-box li:nth-child(1) {
+    background: url(../image/banner1.png);
+}
 
+.banner-box li:nth-child(2) {
+    transform: rotateY(60deg);
+    background: url(../image/banner2.png);
+}
+.banner-box li:nth-child(3) {
+    transform: rotateY(120deg);
+    background: url(../image/banner3.gif);
+}
+.banner-box li:nth-child(4) {
+    transform: rotateY(180deg);
+    background: url(../image/banner4.png);
+}
+.banner-box li:nth-child(5) {
+    transform: rotateY(240deg);
+    background: url(../image/banner5.png);
+}
+.banner-box li:nth-child(6) {
+    transform: rotateY(300deg);
+    background: url(../image/banner6.png);
+}
 
+.banner-arrow{
+    width:89px;
+    height:45px;
+    position: absolute;
+    left:0;
+    right:0;
+    margin:auto;
+    bottom:79px;
+}
+
+.banner-prev{
+    width:42px;
+    height:45px;
+    background:url(../image/prev.png) no-repeat;
+    cursor:pointer;
+    float:left;
+}
+
+.banner-next{
+    width:42px;
+    height:45px;
+    background:url(../image/next.png) no-repeat;
+    cursor:pointer;
+    float:right;
+}
+.banner-border{
+    width:100%;
+    height:16px;
+    position: absolute;
+    left:0;
+    bottom:-8px;
+    background:radial-gradient(circle,#000 0,#000 50%,transparent 0);
+    background-size:16px 16px;
+}
 
 
 

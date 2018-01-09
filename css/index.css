@@ -139,6 +139,7 @@ a {
     margin-top: 14px;
     background: #000;
     position: relative;
+    overflow: hidden;
 }
 
 .banner-inner {
@@ -259,6 +260,10 @@ a {
     width: 1000px;
     height: 782px;
     margin-top: 76px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
 }
 
 .video-item {
@@ -269,6 +274,7 @@ a {
 .video-thumb {
     width: 311px;
     height: 237px;
+    position: relative;
 }
 
 .video-thumb img {
@@ -318,6 +324,125 @@ a {
 .video-author span{
     margin-left:13px;
 }
-
-
-
+.video-box{
+    width:311px;
+    height:53px;
+    position: absolute;
+    left:0;bottom:0;
+    overflow: hidden;
+}
+.video-mask{
+    width:284px;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    padding-left:27px;
+    line-height: 53px;
+    color:#cfd6da;
+    font-size: 14px;
+    position: absolute;
+    left:-311px;
+}
+@keyframes leftIn {
+    0%{
+        left:-311px;
+        top:0;
+    }
+    100%{
+        left:0;
+        top:0;
+    }
+}
+.leftIn{
+    animation:leftIn .5s  linear forwards;
+}
+@keyframes rightIn {
+    0%{
+        left:311px;
+        top:0;
+    }
+    100%{
+        left:0;
+        top:0;
+    }
+}
+.rightIn{
+    animation:rightIn .5s  linear forwards;
+}
+@keyframes topIn {
+    0%{
+        left:0;
+        top:-53px;
+    }
+    100%{
+        left:0;
+        top:0;
+    }
+}
+.topIn{
+    animation:topIn .5s  linear forwards;
+}
+@keyframes bottomIn {
+    0%{
+        left:0;
+        top:53px;
+    }
+    100%{
+        left:0;
+        top:0;
+    }
+}
+.bottomIn{
+    animation:bottomIn .5s  linear forwards;
+}
+@keyframes leftOut {
+    0%{
+        left:0;
+        top:0;
+    }
+    100%{
+        left:-311px;
+        top:0;
+    }
+}
+.leftOut{
+    animation:leftOut .5s  linear forwards;
+}
+@keyframes rightOut{
+    0%{
+        left:0;
+        top:0;
+    }
+    100%{
+        left:311px;
+        top:0;
+    }
+}
+.rightOut{
+    animation:rightOut .5s  linear forwards;
+}
+@keyframes topOut {
+    0%{
+        left:0;
+        top:0;
+    }
+    100%{
+        left:0;
+        top:-53px;
+    }
+}
+.topOut{
+    animation:topOut .5s linear forwards;
+}
+@keyframes bottomOut {
+    0%{
+        left:0;
+        top:0;
+    }
+    100%{
+        left:0;
+        top:53px;
+    }
+}
+.bottomOut{
+    animation:bottomOut .5s  linear forwards;
+}

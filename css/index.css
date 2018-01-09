@@ -67,6 +67,7 @@ a {
     transform-style: preserve-3d;
     display: none;
     perspective: 1000px;
+    z-index:999;
 }
 
 .header-sec-list {
@@ -160,6 +161,7 @@ a {
     list-style: none;
     transform-style: preserve-3d;
     transform-origin:center center -360px;
+    transition:all .5s linear;
 }
 
 .banner-box li {
@@ -169,31 +171,34 @@ a {
     left: 0;
     top: 0;
     transform-origin: center center -360px;
+    background-size:100% auto;
+    box-shadow: 0 0 20px 10px  #fff;
 }
 
 .banner-box li:nth-child(1) {
-    background: url(../image/banner1.png);
+    background-image:url(../image/banner1.png);
+    /*background-position:-50px -50px;*/
 }
 
 .banner-box li:nth-child(2) {
     transform: rotateY(60deg);
-    background: url(../image/banner2.png);
+    background-image: url(../image/banner2.png);
 }
 .banner-box li:nth-child(3) {
     transform: rotateY(120deg);
-    background: url(../image/banner3.gif);
+    background-image: url(../image/banner3.gif);
 }
 .banner-box li:nth-child(4) {
     transform: rotateY(180deg);
-    background: url(../image/banner4.png);
+    background-image: url(../image/banner4.png);
 }
 .banner-box li:nth-child(5) {
     transform: rotateY(240deg);
-    background: url(../image/banner5.png);
+    background-image: url(../image/banner5.png);
 }
 .banner-box li:nth-child(6) {
     transform: rotateY(300deg);
-    background: url(../image/banner6.png);
+    background-image: url(../image/banner6.png);
 }
 
 .banner-arrow{

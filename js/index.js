@@ -28,3 +28,22 @@
         flag = !flag;
     })
 }
+//banner点击
+{
+   $(".banner-next").click(function(){
+       $(".banner-box").css("rotateY","-=60");
+   });
+   $(".banner-prev").click(function(){
+       $(".banner-box").css("rotateY","+=60");
+   });
+   let st=setInterval(function(){
+       $(".banner-box").css("rotateY","-=60");
+   },3000);
+   $(".banner-inner").hover(function(){
+       clearInterval(st);
+   },function(){
+       st=setInterval(function(){
+           $(".banner-box").css("rotateY","-=60");
+       },3000);
+   })
+}

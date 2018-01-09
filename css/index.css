@@ -161,7 +161,8 @@ a {
     margin: auto;
     list-style: none;
     transform-style: preserve-3d;
-    transform-origin: center center -360px;
+    transform-origin: center center -450px;
+    /*360*/
     transition: all .5s linear;
 }
 
@@ -171,7 +172,7 @@ a {
     position: absolute;
     left: 0;
     top: 0;
-    transform-origin: center center -360px;
+    transform-origin: center center -450px;
     background-size: 100% auto;
     box-shadow: 0 0 20px 10px #fff;
 }

@@ -79,6 +79,7 @@
                 $(this).data("dir", "top")
             }
         }
+
         if (!$(this).data("hover")) {
             if (n === 3) {
                 n = 0;

@@ -84,7 +84,7 @@
             if (n === 3) {
                 n = 0;
                 $(this).data("hover", true);
-                $(".video-mask").eq(index).attr("class","video-mask");
+                $(".video-mask").eq(index).attr("class", "video-mask");
                 if (dir === "hon") {
                     if (cx > ox) {
                         $(".video-mask").eq(index).addClass("leftIn");
@@ -104,19 +104,54 @@
         ox = cx;
         oy = cy;
     });
-    $(".video-thumb").mouseleave(function(){
+    $(".video-thumb").mouseleave(function () {
         $(this).data("hover", false);
-        let index=$(this).index(".video-thumb");
-        switch($(this).data("dir")){
-            case "left":$(".video-mask").eq(index).addClass("leftOut");break;
-            case "right":$(".video-mask").eq(index).addClass("rightOut");break;
-            case "top":$(".video-mask").eq(index).addClass("topOut");break;
-            case "bottom":$(".video-mask").eq(index).addClass("bottomOut");break;
+        let index = $(this).index(".video-thumb");
+        switch ($(this).data("dir")) {
+            case "left":
+                $(".video-mask").eq(index).addClass("leftOut");
+                break;
+            case "right":
+                $(".video-mask").eq(index).addClass("rightOut");
+                break;
+            case "top":
+                $(".video-mask").eq(index).addClass("topOut");
+                break;
+            case "bottom":
+                $(".video-mask").eq(index).addClass("bottomOut");
+                break;
         }
     });
-    $(".video-mask").on("animationend",function(){
-        if(!$(this).parent().parent().data("hover")){
-            $(this).attr("class","video-mask");
+    $(".video-mask").on("animationend", function () {
+        if (!$(this).parent().parent().data("hover")) {
+            $(this).attr("class", "video-mask");
         }
+    })
+}
+//新闻列表展示
+{
+    let max = $(".news-title").offset().top;
+    let flag = true;
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > max) {
+            if (flag) {
+                flag = false;
+                $(".news-clip").animate({top: -15});
+                $(".news-list").each(function (index) {
+                    $(this).delay((index + 1) * 300).animate({top: 0});
+                })
+            }
+        }
+        if ($(this).scrollTop() < max - $(window).height()) {
+            flag = true;
+            $(".news-clip").css({top: 1000});
+            $(".news-list").css({top: 1000});
+        }
+    })
+}
+//返回顶部
+{
+    $(".totop").click(function () {
+        $("html,body").animate({scrollTop: 0},300);
     })
 }

@@ -139,7 +139,6 @@ a {
     margin-top: 14px;
     background: #000;
     position: relative;
-    overflow: hidden;
 }
 
 .banner-inner {
@@ -241,6 +240,7 @@ a {
     bottom: -8px;
     background: radial-gradient(circle, #000 0, #000 50%, transparent 0);
     background-size: 16px 16px;
+    z-index: 99;
 }
 
 .video {
@@ -490,6 +490,7 @@ a {
     background: #ebe3d7;
     position: relative;
     padding-top: 53px;
+    overflow: hidden;
 }
 
 .news-border1 {
@@ -517,6 +518,7 @@ a {
     height: 587px;
     margin: 0 auto;
     position: relative;
+    transform-style: preserve-3d;
 }
 
 .news-clip {
@@ -524,10 +526,10 @@ a {
     height: 31px;
     border: 2px solid #1b1b1b;
     background: linear-gradient(to bottom, #fff 0, #000 50%, #fff 100%);
-    border-radius: 3px;
+    border-radius: 6px;
     position: absolute;
-    top: -15px;
-    z-index:100;
+    top: 1000px;
+    z-index: 100;
 }
 
 .news-clip:nth-child(1) {
@@ -551,6 +553,40 @@ a {
     height: 183px;
     background: #fff;
     position: relative;
+    top: 1000px;
+}
+
+.news-list:hover .news-name {
+    color: #ff6666;
+}
+
+.news-list:hover .news-thumb-box img {
+    border: 2px solid #ff6666;
+}
+
+.news-list:hover {
+    animation: shake .5s ease-in 2;
+}
+
+@keyframes shake {
+    0% {
+        transform: perspective(1000px) rotateX(0deg)
+    }
+    20% {
+        transform: perspective(1000px) rotateX(-30deg)
+    }
+    40% {
+        transform: perspective(1000px) rotateX(0deg)
+    }
+    60% {
+        transform: perspective(1000px) rotateX(30deg)
+    }
+    80% {
+        transform: perspective(1000px) rotateX(0deg)
+    }
+    100% {
+        transform: perspective(1000px) rotateX(0deg)
+    }
 }
 
 .news-thumb-box {
@@ -567,6 +603,7 @@ a {
     height: 93px;
     border: 2px solid #ebe3d7;
     border-radius: 50%;
+    transition: all .5s;
 }
 
 .news-message {
@@ -583,6 +620,7 @@ a {
     line-height: 35px;
     font-size: 20px;
     color: #757575;
+    transition: all .5s;
 }
 
 .news-description {
@@ -595,18 +633,57 @@ a {
 .news-date {
     width: 107px;
     height: 36px;
-    float:right;
-    font-size:14px;
-    background:url(../image/time.png) no-repeat left;
-    padding-left:32px;
+    float: right;
+    font-size: 14px;
+    background: url(../image/time.png) no-repeat left;
+    padding-left: 32px;
 }
-.news-border{
-    width:100%;
-    height:10px;
+
+.news-border {
+    width: 100%;
+    height: 10px;
     position: absolute;
-    left:0;
-    bottom:-5px;
-    background: radial-gradient(circle,#ebe3d7 0,#ebe3d7 60%, transparent 0);
+    left: 0;
+    bottom: -5px;
+    background: radial-gradient(circle, #ebe3d7 0, #ebe3d7 60%, transparent 0);
     background-size: 10px 10px;
-    z-index:99;
+    z-index: 99;
 }
+
+.video-list.two {
+    height: 371px;
+}
+
+.video-title.two {
+    background: url(../image/title3.png);
+}
+
+.footer {
+    width: 100%;
+    height: 109px;
+    background: #000;
+    margin-top: 65px;
+    padding-top:52px;
+    position: relative;
+}
+
+.footer p {
+    text-align: center;
+    font-size: 16px;
+    color:#7a7a7a;
+}
+.totop{
+    width:64px;
+    height:66px;
+    position: absolute;
+    left:50%;
+    margin-left:-32px;
+    top:-33px;
+    background:url(../image/totop.png);
+    cursor: pointer;
+    transition: all 1s;
+}
+.totop:hover{
+    transform:rotate(-360deg);
+}
+

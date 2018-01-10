@@ -251,8 +251,8 @@ a {
 }
 
 .video-title {
-    width: 160px;
-    height: 71px;
+    width: 385px;
+    height: 114px;
     margin: 0 auto;
     background: url(../image/title1.png);
 }
@@ -527,6 +527,7 @@ a {
     border-radius: 3px;
     position: absolute;
     top: -15px;
+    z-index:100;
 }
 
 .news-clip:nth-child(1) {
@@ -549,6 +550,7 @@ a {
     width: 100%;
     height: 183px;
     background: #fff;
+    position: relative;
 }
 
 .news-thumb-box {
@@ -597,4 +599,14 @@ a {
     font-size:14px;
     background:url(../image/time.png) no-repeat left;
     padding-left:32px;
+}
+.news-border{
+    width:100%;
+    height:10px;
+    position: absolute;
+    left:0;
+    bottom:-5px;
+    background: radial-gradient(circle,#ebe3d7 0,#ebe3d7 60%, transparent 0);
+    background-size: 10px 10px;
+    z-index:99;
 }

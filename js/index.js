@@ -219,3 +219,40 @@
         ${str}
     `).appendTo("head");
 }
+//文字效果
+{
+        function words(demo) {
+            let str=demo.innerHTML;
+            demo.style.position="relative";
+            demo.innerHTML="";
+            let spans=[];
+            Array.from(str).forEach(function (ele) {
+                let newspan=document.createElement("span");
+                newspan.innerHTML=ele;
+                newspan.style.cssText="position:relative;left:0;top:0;";
+                demo.appendChild(newspan);
+                spans.push(newspan);
+            });
+            demo.onmousemove=function (e) {
+                let [x]=[e.offsetX];
+                spans.forEach(function (ele) {
+                    ele.style.top=Math.abs(x - ele.offsetLeft) / 5 - 15 > 0 ? 0 : Math.abs(x - ele.offsetLeft) / 5 - 15 + "px";
+                })
+            };
+            demo.onmouseleave=function () {
+                spans.forEach(function (ele) {
+                    ele.style.transition="all .3s";
+                    setTimeout(function () {
+                        ele.style.top=0;
+                    }, 0);
+                    ele.addEventListener("transitionend", function () {
+                        ele.style.transition="none";
+                    })
+                })
+            }
+        }
+
+        $(".video-name p").each(function (index, ele) {
+            words(ele);
+        });
+}

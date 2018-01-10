@@ -493,6 +493,7 @@ a {
     position: relative;
     padding-top: 53px;
     overflow: hidden;
+    z-index:1000;
 }
 
 .news-border1 {

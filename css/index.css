@@ -270,6 +270,8 @@ a {
 .video-item {
     width: 311px;
     height: 371px;
+    position: relative;
+    z-index:1000;
 }
 
 .video-thumb {
@@ -529,7 +531,7 @@ a {
     border-radius: 6px;
     position: absolute;
     top: 1000px;
-    z-index: 100;
+    z-index: 100000;
 }
 
 .news-clip:nth-child(1) {
@@ -554,6 +556,7 @@ a {
     background: #fff;
     position: relative;
     top: 1000px;
+    z-index:10000;
 }
 
 .news-list:hover .news-name {
@@ -647,7 +650,7 @@ a {
     bottom: -5px;
     background: radial-gradient(circle, #ebe3d7 0, #ebe3d7 60%, transparent 0);
     background-size: 10px 10px;
-    z-index: 99;
+    z-index: 99999;
 }
 
 .video-list.two {

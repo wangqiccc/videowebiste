@@ -152,6 +152,70 @@
 //返回顶部
 {
     $(".totop").click(function () {
-        $("html,body").animate({scrollTop: 0},300);
+        $("html,body").animate({scrollTop: 0}, 300);
     })
+}
+//雪花效果
+{
+    let str = "";
+    for (let i = 0; i < 100; i++) {
+        str+=`
+          @keyframes snow${i}{
+            0%{
+              transform:translate(0,0) rotate(0);
+            }
+            100%{
+              transform:translate(${Math.random()*500-250}px,${$(window).height()}px) rotate(${Math.random()*720}deg);
+            }
+          }
+        `;
+        let height=Math.random()*10+10;
+        let newdiv=$("<div>").addClass("snow").css({
+            width:Math.random()*2+2,
+            height:height,
+            position:"fixed",
+            left:Math.random()*$(window).width(),
+            top:-Math.random()*$(window).height(),
+            filter:"blur(1px)",
+            opacity:.6,
+            animation:`snow${i} ${Math.random()*3+5}s linear infinite`,
+            zIndex:999
+        }).appendTo("body");
+        for(let i=0;i<6;i++){
+            $("<div>").css({
+                width:"100%",
+                height:"100%",
+                background:"#fff",
+                position:"absolute",
+                left:0,
+                top:0,
+                transformOrigin:`center 15px`,
+                borderRadius:"5px",
+                transform:`rotate(${i*60}deg)`
+            }).appendTo(newdiv);
+        }
+    }
+    $("<style>").html(`
+        .snow div:before{
+            content:"";
+            width:${Math.random()*30+20}%;
+            height:${Math.random()*30+20}%;
+            position: absolute;
+            left:0;
+            top:0;
+            transform:rotate(90deg);
+            background:#fff;
+        }
+        .snow div:after{
+            content:"";
+            width:${Math.random()*60+20}%;
+            height:${Math.random()*60+20}%;
+            position: absolute;
+            left:1px;
+            top:30%;
+            transform:rotate(90deg);
+            background:#fff;
+        }
+        ${str}
+    `).appendTo("head");
 }

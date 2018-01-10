@@ -284,11 +284,11 @@ a {
 }
 
 .video-message {
-    width:307px;
-    height:111px;
-    border:2px solid #dadada;
-    border-top:0;
-    padding-top:22px;
+    width: 307px;
+    height: 111px;
+    border: 2px solid #dadada;
+    border-top: 0;
+    padding-top: 22px;
 }
 
 .video-name {
@@ -307,143 +307,294 @@ a {
     font-size: 14px;
     color: #737373;
 }
-.video-author{
-    width:273px;
-    height:16px;
-    margin:0 auto;
-    margin-top:17px;
+
+.video-author {
+    width: 273px;
+    height: 16px;
+    margin: 0 auto;
+    margin-top: 17px;
     font-size: 14px;
-    color:#737373;
+    color: #737373;
     line-height: 16px;
 }
-.video-author img{
-    width:16px;
-    height:16px;
-    border-radius:50%;
+
+.video-author img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
     vertical-align: middle;
 }
-.video-author span{
-    margin-left:13px;
+
+.video-author span {
+    margin-left: 13px;
 }
-.video-box{
-    width:311px;
-    height:53px;
+
+.video-box {
+    width: 311px;
+    height: 53px;
     position: absolute;
-    left:0;bottom:0;
+    left: 0;
+    bottom: 0;
     overflow: hidden;
 }
-.video-mask{
-    width:284px;
-    height:100%;
-    background:rgba(0,0,0,0.5);
-    padding-left:27px;
+
+.video-mask {
+    width: 284px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 27px;
     line-height: 53px;
-    color:#cfd6da;
+    color: #cfd6da;
     font-size: 14px;
     position: absolute;
-    left:-311px;
+    left: -311px;
 }
+
 @keyframes leftIn {
-    0%{
-        left:-311px;
-        top:0;
+    0% {
+        left: -311px;
+        top: 0;
     }
-    100%{
-        left:0;
-        top:0;
+    100% {
+        left: 0;
+        top: 0;
     }
 }
-.leftIn{
-    animation:leftIn .5s  linear forwards;
+
+.leftIn {
+    animation: leftIn .5s linear forwards;
 }
+
 @keyframes rightIn {
-    0%{
-        left:311px;
-        top:0;
+    0% {
+        left: 311px;
+        top: 0;
     }
-    100%{
-        left:0;
-        top:0;
+    100% {
+        left: 0;
+        top: 0;
     }
 }
-.rightIn{
-    animation:rightIn .5s  linear forwards;
+
+.rightIn {
+    animation: rightIn .5s linear forwards;
 }
+
 @keyframes topIn {
-    0%{
-        left:0;
-        top:-53px;
+    0% {
+        left: 0;
+        top: -53px;
     }
-    100%{
-        left:0;
-        top:0;
+    100% {
+        left: 0;
+        top: 0;
     }
 }
-.topIn{
-    animation:topIn .5s  linear forwards;
+
+.topIn {
+    animation: topIn .5s linear forwards;
 }
+
 @keyframes bottomIn {
-    0%{
-        left:0;
-        top:53px;
+    0% {
+        left: 0;
+        top: 53px;
     }
-    100%{
-        left:0;
-        top:0;
+    100% {
+        left: 0;
+        top: 0;
     }
 }
-.bottomIn{
-    animation:bottomIn .5s  linear forwards;
+
+.bottomIn {
+    animation: bottomIn .5s linear forwards;
 }
+
 @keyframes leftOut {
-    0%{
-        left:0;
-        top:0;
+    0% {
+        left: 0;
+        top: 0;
     }
-    100%{
-        left:-311px;
-        top:0;
-    }
-}
-.leftOut{
-    animation:leftOut .5s  linear forwards;
-}
-@keyframes rightOut{
-    0%{
-        left:0;
-        top:0;
-    }
-    100%{
-        left:311px;
-        top:0;
+    100% {
+        left: -311px;
+        top: 0;
     }
 }
-.rightOut{
-    animation:rightOut .5s  linear forwards;
+
+.leftOut {
+    animation: leftOut .5s linear forwards;
 }
+
+@keyframes rightOut {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    100% {
+        left: 311px;
+        top: 0;
+    }
+}
+
+.rightOut {
+    animation: rightOut .5s linear forwards;
+}
+
 @keyframes topOut {
-    0%{
-        left:0;
-        top:0;
+    0% {
+        left: 0;
+        top: 0;
     }
-    100%{
-        left:0;
-        top:-53px;
+    100% {
+        left: 0;
+        top: -53px;
     }
 }
-.topOut{
-    animation:topOut .5s linear forwards;
+
+.topOut {
+    animation: topOut .5s linear forwards;
 }
+
 @keyframes bottomOut {
-    0%{
-        left:0;
-        top:0;
+    0% {
+        left: 0;
+        top: 0;
     }
-    100%{
-        left:0;
-        top:53px;
+    100% {
+        left: 0;
+        top: 53px;
     }
 }
-.bottomOut{
-    animation:bottomOut .5s  linear forwards;
+
+.bottomOut {
+    animation: bottomOut .5s linear forwards;
+}
+
+.news {
+    width: 100%;
+    height: auto;
+    padding-top: 102px;
+}
+
+.news-title {
+    width: 387px;
+    height: 113px;
+    margin: 0 auto;
+    background: url(../image/title2.png);
+}
+
+.news-content {
+    width: 100%;
+    height: 629px;
+    margin-top: 52px;
+    background: #ebe3d7;
+    position: relative;
+    padding-top: 53px;
+}
+
+.news-border1 {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    background: radial-gradient(circle, #fff 0, #fff 60%, transparent 0);
+    background-size: 20px 20px;
+}
+
+.news-border2 {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: radial-gradient(circle, #fff 0, #fff 60%, transparent 0);
+    background-size: 20px 20px;
+}
+
+.news-inner {
+    width: 885px;
+    height: 587px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.news-clip {
+    width: 6px;
+    height: 31px;
+    border: 2px solid #1b1b1b;
+    background: linear-gradient(to bottom, #fff 0, #000 50%, #fff 100%);
+    border-radius: 3px;
+    position: absolute;
+    top: -15px;
+}
+
+.news-clip:nth-child(1) {
+    left: 51px;
+}
+
+.news-clip:nth-child(2) {
+    left: 95px;
+}
+
+.news-clip:nth-child(3) {
+    right: 51px;
+}
+
+.news-clip:nth-child(4) {
+    right: 95px;
+}
+
+.news-list {
+    width: 100%;
+    height: 183px;
+    background: #fff;
+}
+
+.news-thumb-box {
+    width: 136px;
+    height: 95px;
+    margin-top: 39px;
+    margin-left: 35px;
+    border-right: 2px dotted #b2b2b2;
+    float: left;
+}
+
+.news-thumb-box img {
+    width: 93px;
+    height: 93px;
+    border: 2px solid #ebe3d7;
+    border-radius: 50%;
+}
+
+.news-message {
+    width: 644px;
+    height: 95px;
+    margin-top: 39px;
+    float: left;
+    padding-left: 30px;
+}
+
+.news-name {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    color: #757575;
+}
+
+.news-description {
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.news-date {
+    width: 107px;
+    height: 36px;
+    float:right;
+    font-size:14px;
+    background:url(../image/time.png) no-repeat left;
+    padding-left:32px;
 }
